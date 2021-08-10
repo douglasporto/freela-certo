@@ -1,0 +1,21 @@
+{
+  "name": "Next Blog - Boilerplate",
+  "short_name": "Next Blog",
+  "icons": [
+    {
+      "src": "/img/brain-logo-400.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/brain-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#06092B",
+  "description": "Boilerlate utilizando Typescript, React, NextJS e Styled Components!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#06092B"
+}

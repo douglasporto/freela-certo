@@ -1,0 +1,102 @@
+{
+  "name": "community-games",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings=0",
+    "test": "jest",
+    "generate": "yarn plop --plopfile ./generators/plopfile.js",
+    "test:watch": "yarn test --watch",
+    "postinstall": "husky install",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
+  "dependencies": {
+    "next": "10.0.6",
+    "next-pwa": "^5.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-knobs": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/react": "^6.1.21",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.19",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "jest-styled-components": "^7.0.3",
+    "lint-staged": "^10.5.4",
+    "plop": "^2.7.4",
+    "prettier": "^2.2.1",
+    "storybook-addon-next-router": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        ":sparkles: Feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        ":bug: Fix": {
+          "description": "A bug fix",
+          "title": "Bug fix"
+        },
+        ":hammer: Refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature ",
+          "title": "Refactor"
+        },
+        ":lipstick: Style": {
+          "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+          "title": "Style"
+        },
+        ":bulb: Chore": {
+          "description": "Other changes that don't modify src or test files",
+          "title": "Chore"
+        },
+        ":books: Docs": {
+          "description": "Documentation only change",
+          "title": "Documentation"
+        },
+        ":wrench: Config": {
+          "description": "Configuration project",
+          "title": "Configuration"
+        }
+      }
+    }
+  }
+}
