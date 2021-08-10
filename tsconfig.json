@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/contexts/*": ["contexts/*"],
+      "@/ssrUtils/*": ["ssrUtils/*"],
+      "@/utils/*": ["utils/*"],
+      "@/ZordUi/*": ["ZordUi/*"]
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
