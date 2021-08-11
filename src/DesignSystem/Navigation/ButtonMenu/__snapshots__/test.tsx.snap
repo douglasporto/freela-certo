@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonMenu /> should render active the button menu 1`] = `
+.c0 {
+  width: 100%;
+  background-color: initial;
+  color: #D7DCEC;
+  border-radius: 0.4rem;
+  border: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: #1A223F !important;
+  color: #7C4DFF !important;
+}
+
+.c0:hover {
+  background-color: #1A223F;
+  color: #7C4DFF;
+}
+
+<div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text c0"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Dashboard
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`
